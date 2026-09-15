@@ -1,0 +1,11 @@
+services:
+  tensorflow-learn:
+    build: .
+    image: tensorflow-learn
+    ports:
+      - "8888:8888"
+    gpus: all
+    volumes:
+      - .:/workspace
+    stdin_open: true
+    tty: true

@@ -1,16 +1,13 @@
-This project is intended to be run in docker. A Dockerfile is available in the deeplearning demonstrations folder. it was used to build a docker image called tensorflow-learn by running 
+## Running
 
-sudo docker build -t tensorflow-learn .
+This project is intended to run in Docker. Build and start the environment with:
 
-in the directory containing the Dockerfile.
+```bash
+docker compose up --build
+```
 
-The plan is to bind mount the Deep-Learning-Demonstrations into the container with the environment and use jupyter lab from there.
+The project directory is mounted into the container at `/workspace`, so changes to notebooks and code remain on the host.
 
-Given this folder is completely local nothing happens to it if we rebuild the image or container in docker. Git can be used from the host directly, so the container needs no Github token.
+JupyterLab will be available at `http://localhost:8888`. The access token can be found in the container output when started.
 
 
-sudo docker run --rm -it \
-    --gpus all \
-    -p 8888:8888 \
-    --mount type=bind,source=/home/sylvia/_Learn/TensorFlow_Learn/Deep-Learning-Demonstrations,target=/workspace \
-    tensorflow-learn
