@@ -1,3 +1,9 @@
+#  TensorFlow Deep Learning Demonstrations
+
+A collection of small demonstrations for learning and experimenting with neural network architectures using **TensorFlow**.
+
+This project is the TensorFlow counterpart to a sister project using PyTorch: **[PyTorch Deep Learning demonstrations](https://github.com/feathered-songster/Deep-Learning-Demonstrations-PyTorch**.
+
 ## Running
 
 This project is intended to run in Docker. Build and start the environment with:
